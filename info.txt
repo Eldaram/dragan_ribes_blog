@@ -1,0 +1,51 @@
+{"type":"HTTP","requestId":"5be82d30-df8e-44bb-b295-6536cd9e8e34","method":"GET","url":"/api/posts?page=1"}
+{"type":"SQL","requestId":"5be82d30-df8e-44bb-b295-6536cd9e8e34","sql":"select \"posts\".* from \"posts\" limit $1","bindings":[5]}
+{"type":"SQL","requestId":"5be82d30-df8e-44bb-b295-6536cd9e8e34","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1, $2)","bindings":[2,4]}
+{"type":"SQL","requestId":"5be82d30-df8e-44bb-b295-6536cd9e8e34","sql":"select count(*) from \"posts\"","bindings":[]}
+{"type":"HTTP","requestId":"1f8613d8-c6ae-4b36-9ca5-a52d7a370bd5","method":"GET","url":"/api/posts/1"}
+{"type":"SQL","requestId":"1f8613d8-c6ae-4b36-9ca5-a52d7a370bd5","sql":"select \"posts\".* from \"posts\" where \"posts\".\"id\" = $1","bindings":[1]}
+{"type":"SQL","requestId":"1f8613d8-c6ae-4b36-9ca5-a52d7a370bd5","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1)","bindings":[2]}
+{"type":"SQL","requestId":"1f8613d8-c6ae-4b36-9ca5-a52d7a370bd5","sql":"select \"comments\".* from \"comments\" where \"comments\".\"postId\" in ($1)","bindings":[1]}
+{"type":"SQL","requestId":"1f8613d8-c6ae-4b36-9ca5-a52d7a370bd5","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1, $2)","bindings":[2,4]}
+{"type":"HTTP","requestId":"0fbb9bbb-fdc6-40bc-b540-c8c54968f1ce","method":"GET","url":"/api/posts?page=1"}
+{"type":"SQL","requestId":"0fbb9bbb-fdc6-40bc-b540-c8c54968f1ce","sql":"select \"posts\".* from \"posts\" limit $1","bindings":[5]}
+{"type":"SQL","requestId":"0fbb9bbb-fdc6-40bc-b540-c8c54968f1ce","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1, $2)","bindings":[2,4]}
+{"type":"SQL","requestId":"0fbb9bbb-fdc6-40bc-b540-c8c54968f1ce","sql":"select count(*) from \"posts\"","bindings":[]}
+{"type":"HTTP","requestId":"5a9f6029-d23b-4c4d-a06f-8a2689139301","method":"DELETE","url":"/api/sessions"}
+{"type":"HTTP","requestId":"d4a79e54-8ebd-4116-812f-13ef6ea55a91","method":"POST","url":"/api/sessions"}
+{"type":"SQL","requestId":"d4a79e54-8ebd-4116-812f-13ef6ea55a91","sql":"select \"users\".* from \"users\" where \"email\" = $1","bindings":["dragan@gmail.com"]}
+{"type":"HTTP","requestId":"85cdde5a-2f85-4639-ac08-6d911d45a464","method":"GET","url":"/api/posts?page=1"}
+{"type":"SQL","requestId":"85cdde5a-2f85-4639-ac08-6d911d45a464","sql":"select \"posts\".* from \"posts\" limit $1","bindings":[5]}
+{"type":"SQL","requestId":"85cdde5a-2f85-4639-ac08-6d911d45a464","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1, $2)","bindings":[2,4]}
+{"type":"SQL","requestId":"85cdde5a-2f85-4639-ac08-6d911d45a464","sql":"select count(*) from \"posts\"","bindings":[]}
+{"type":"HTTP","requestId":"573335ff-15c2-412e-ac0b-b758e4c09990","method":"GET","url":"/api/posts/1"}
+{"type":"SQL","requestId":"573335ff-15c2-412e-ac0b-b758e4c09990","sql":"select \"posts\".* from \"posts\" where \"posts\".\"id\" = $1","bindings":[1]}
+{"type":"SQL","requestId":"573335ff-15c2-412e-ac0b-b758e4c09990","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1)","bindings":[2]}
+{"type":"SQL","requestId":"573335ff-15c2-412e-ac0b-b758e4c09990","sql":"select \"comments\".* from \"comments\" where \"comments\".\"postId\" in ($1)","bindings":[1]}
+{"type":"SQL","requestId":"573335ff-15c2-412e-ac0b-b758e4c09990","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1, $2)","bindings":[2,4]}
+{"type":"HTTP","requestId":"a977af28-3bd4-4206-92f6-ff8c489371a8","method":"POST","url":"/api/posts"}
+{"type":"SQL","requestId":"a977af28-3bd4-4206-92f6-ff8c489371a8","sql":"insert into \"posts\" (\"authorId\", \"content\", \"title\") values ($1, $2, $3) returning \"id\"","bindings":[4,"jkhblkmbljkhvbljklkjhblkjblkjbljkblkjh ","kuhvlkjsbdlmkqjshndlmkqsjdh"]}
+{"type":"SQL","requestId":"a977af28-3bd4-4206-92f6-ff8c489371a8","sql":"select \"posts\".* from \"posts\" where \"posts\".\"id\" in ($1)","bindings":[9]}
+{"type":"HTTP","requestId":"2b32b8d3-cf87-4249-a2d9-e53c2d746f21","method":"GET","url":"/api/posts/9"}
+{"type":"SQL","requestId":"2b32b8d3-cf87-4249-a2d9-e53c2d746f21","sql":"select \"posts\".* from \"posts\" where \"posts\".\"id\" = $1","bindings":[9]}
+{"type":"SQL","requestId":"2b32b8d3-cf87-4249-a2d9-e53c2d746f21","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1)","bindings":[4]}
+{"type":"SQL","requestId":"2b32b8d3-cf87-4249-a2d9-e53c2d746f21","sql":"select \"comments\".* from \"comments\" where \"comments\".\"postId\" in ($1)","bindings":[9]}
+{"type":"HTTP","requestId":"6ae2fd80-614f-45fc-bc4e-10b6143dfe55","method":"POST","url":"/api/comments"}
+{"type":"SQL","requestId":"6ae2fd80-614f-45fc-bc4e-10b6143dfe55","sql":"insert into \"comments\" (\"authorId\", \"content\", \"postId\") values ($1, $2, $3) returning \"id\"","bindings":[4,"etsetsfsdfsdfsdfsdfqsdqsdqd",9]}
+{"type":"SQL","requestId":"6ae2fd80-614f-45fc-bc4e-10b6143dfe55","sql":"select \"comments\".* from \"comments\" where \"comments\".\"id\" in ($1)","bindings":[6]}
+{"type":"HTTP","requestId":"941c5419-44de-4779-bc28-b2c703a0ff6a","method":"GET","url":"/api/posts?page=1"}
+{"type":"SQL","requestId":"941c5419-44de-4779-bc28-b2c703a0ff6a","sql":"select \"posts\".* from \"posts\" limit $1","bindings":[5]}
+{"type":"SQL","requestId":"941c5419-44de-4779-bc28-b2c703a0ff6a","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1, $2)","bindings":[2,4]}
+{"type":"SQL","requestId":"941c5419-44de-4779-bc28-b2c703a0ff6a","sql":"select count(*) from \"posts\"","bindings":[]}
+{"type":"HTTP","requestId":"64f558d2-ad61-4855-b7f3-f56fbe805d2f","method":"GET","url":"/api/posts/1"}
+{"type":"SQL","requestId":"64f558d2-ad61-4855-b7f3-f56fbe805d2f","sql":"select \"posts\".* from \"posts\" where \"posts\".\"id\" = $1","bindings":[1]}
+{"type":"SQL","requestId":"64f558d2-ad61-4855-b7f3-f56fbe805d2f","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1)","bindings":[2]}
+{"type":"SQL","requestId":"64f558d2-ad61-4855-b7f3-f56fbe805d2f","sql":"select \"comments\".* from \"comments\" where \"comments\".\"postId\" in ($1)","bindings":[1]}
+{"type":"SQL","requestId":"64f558d2-ad61-4855-b7f3-f56fbe805d2f","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1, $2)","bindings":[2,4]}
+{"type":"HTTP","requestId":"2cf53b54-04f8-4dca-9d09-247aaa14607f","method":"POST","url":"/api/comments"}
+{"type":"SQL","requestId":"2cf53b54-04f8-4dca-9d09-247aaa14607f","sql":"insert into \"comments\" (\"authorId\", \"content\", \"postId\") values ($1, $2, $3) returning \"id\"","bindings":[4,"qsdqsdqsdqd;jhklmsmkldqh",1]}
+{"type":"SQL","requestId":"2cf53b54-04f8-4dca-9d09-247aaa14607f","sql":"select \"comments\".* from \"comments\" where \"comments\".\"id\" in ($1)","bindings":[7]}
+{"type":"HTTP","requestId":"7c303ca5-23cf-4794-8e8c-17cdd90c3024","method":"GET","url":"/api/posts?page=1"}
+{"type":"SQL","requestId":"7c303ca5-23cf-4794-8e8c-17cdd90c3024","sql":"select \"posts\".* from \"posts\" limit $1","bindings":[5]}
+{"type":"SQL","requestId":"7c303ca5-23cf-4794-8e8c-17cdd90c3024","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1, $2)","bindings":[2,4]}
+{"type":"SQL","requestId":"7c303ca5-23cf-4794-8e8c-17cdd90c3024","sql":"select count(*) from \"posts\"","bindings":[]}
