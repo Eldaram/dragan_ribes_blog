@@ -1,5 +1,20 @@
 export const up = async (db) => {
-  await db.schema.createTable("posts", (comments) => {
+  await db.schema.dropTable("comments")
+  await db.schema.dropTable("posts")
+}
+
+export const down = async (db) => {
+  await db.schema.createTable("posts", (table) => {
+    table.increments("id")
+    table.text("title")
+    table.text("content")
+    table.integer("authorId").notNullable()
+    table.timestamps(true, true, true)
+    table.timestamp("deletedAt")
+    table.foreign("authorId").references("id").inTable("users")
+  })
+
+  await db.schema.createTable("comments", (table) => {
     table.increments("id")
     table.text("content")
     table.integer("postId").notNullable()
@@ -9,8 +24,4 @@ export const up = async (db) => {
     table.timestamps(true, true, true)
     table.timestamp("deletedAt")
   })
-}
-
-export const down = async (db) => {
-  await db.schema.dropTable("comments")
 }

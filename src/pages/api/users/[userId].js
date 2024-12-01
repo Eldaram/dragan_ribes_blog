@@ -20,7 +20,6 @@ const handle = mw({
     }) => {
       const user = await UserModel.query()
         .findById(userId)
-        .withGraphFetched("[posts, comments]")
         .throwIfNotFound()
 
       send(user)

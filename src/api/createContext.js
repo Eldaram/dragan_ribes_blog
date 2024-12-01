@@ -2,8 +2,6 @@ import config from "@/api/config"
 import { logInfo } from "@/api/utils/createLogger"
 import BaseModel from "@/db/models/BaseModel"
 import UserModel from "@/db/models/UserModel"
-import PostModel from "@/db/models/PostModel"
-import CommentModel from "@/db/models/CommentModel"
 import knex from "knex"
 
 export const createContext = ({ req, res, next, requestId, logger }) => {
@@ -32,8 +30,6 @@ export const createContext = ({ req, res, next, requestId, logger }) => {
     db,
     models: {
       UserModel,
-      PostModel,
-      CommentModel,
     },
     logger,
   }

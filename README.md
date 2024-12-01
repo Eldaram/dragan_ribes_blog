@@ -1,12 +1,3 @@
-## Deadline
-Hi teacher!
-I deceded to continue the developpment of the forum after the deadline. 
-I added a tag on github to have a version of my work before any other additions, you can find it [here](https://github.com/Eldaram/dragan_ribes_blog/tree/v1)
-Have a nice day!
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
