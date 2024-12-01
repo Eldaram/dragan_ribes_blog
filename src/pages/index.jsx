@@ -7,7 +7,7 @@ export const getServerSideProps = ({ query: { page } }) => ({
   },
 })
 const IndexPage = (props) => (
-    <PostList {...props}/>
+    <></>
   )
 
 export default IndexPage

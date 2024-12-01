@@ -49,3 +49,23 @@
 {"type":"SQL","requestId":"7c303ca5-23cf-4794-8e8c-17cdd90c3024","sql":"select \"posts\".* from \"posts\" limit $1","bindings":[5]}
 {"type":"SQL","requestId":"7c303ca5-23cf-4794-8e8c-17cdd90c3024","sql":"select \"users\".* from \"users\" where \"users\".\"id\" in ($1, $2)","bindings":[2,4]}
 {"type":"SQL","requestId":"7c303ca5-23cf-4794-8e8c-17cdd90c3024","sql":"select count(*) from \"posts\"","bindings":[]}
+{"type":"HTTP","requestId":"66bddb65-84ff-42cc-a2e4-5be1054bac8c","method":"GET","url":"/api/posts?page=1"}
+{"type":"SQL","requestId":"66bddb65-84ff-42cc-a2e4-5be1054bac8c","sql":"select \"posts\".* from \"posts\" limit $1","bindings":[5]}
+{"type":"SQL","requestId":"66bddb65-84ff-42cc-a2e4-5be1054bac8c","sql":"select count(*) from \"posts\"","bindings":[]}
+{"type":"HTTP","requestId":"e84013ca-13f0-4d9b-a69f-5c4b054e1403","method":"GET","url":"/api/posts?page=1"}
+{"type":"SQL","requestId":"e84013ca-13f0-4d9b-a69f-5c4b054e1403","sql":"select \"posts\".* from \"posts\" limit $1","bindings":[5]}
+{"type":"SQL","requestId":"e84013ca-13f0-4d9b-a69f-5c4b054e1403","sql":"select count(*) from \"posts\"","bindings":[]}
+{"type":"HTTP","requestId":"15727683-fb1f-4408-a8ee-b0d224d94fad","method":"GET","url":"/api/posts?page=1"}
+{"type":"SQL","requestId":"15727683-fb1f-4408-a8ee-b0d224d94fad","sql":"select \"posts\".* from \"posts\" limit $1","bindings":[5]}
+{"type":"SQL","requestId":"15727683-fb1f-4408-a8ee-b0d224d94fad","sql":"select count(*) from \"posts\"","bindings":[]}
+{"type":"HTTP","requestId":"ac03091e-d2bf-4c2d-bc3c-9ef7e37d2b3f","method":"POST","url":"/api/sessions"}
+{"type":"SQL","requestId":"ac03091e-d2bf-4c2d-bc3c-9ef7e37d2b3f","sql":"select \"users\".* from \"users\" where \"email\" = $1","bindings":["dragan.ribes@gmail.com"]}
+{"type":"HTTP","requestId":"57f8a677-d985-4ecc-b2e6-2eaa30b05c9b","method":"POST","url":"/api/users"}
+{"type":"SQL","requestId":"57f8a677-d985-4ecc-b2e6-2eaa30b05c9b","sql":"select \"users\".* from \"users\" where \"email\" = $1","bindings":["dragan.ribes@gmail.com"]}
+{"type":"SQL","requestId":"57f8a677-d985-4ecc-b2e6-2eaa30b05c9b","sql":"insert into \"users\" (\"email\", \"passwordHash\", \"passwordSalt\", \"userName\") values ($1, $2, $3, $4) returning \"id\"","bindings":["dragan.ribes@gmail.com","fd6542c0c92045e10850bd4ab98dcdf23f676ab2d0381dfc060d5bef821928817009e6dbed82d965e63f7d5263423db80e171236343b5f4ed1d4f6cb269cb95d8edd7d3c5f9be40484ab6a76361af1a0ad27f28edbf382b8efee9aa8074c9989951027324d3aa02545dbb2d9c30a0b7ca6ec08c87a627a541dc124c47fab15bb4707fcb2c0e344c8c835ddfe4f5a868feb6ca78f1501f14d9867a9824605b6ec89ab2ab79d1ecb4a9a37f07b7584125a8667c181edf5bb683cbb61609a0ed0c97cc446384433c16f9664add628e6d5a32a4567826a0c1f06e879cf9768d46f39e53386399b8846f92988948e87472448aade212268b4034a8fd9d1164b2268eb","baf491a97da571979682155072d61613efd96cb474e8e65bb6c8ae30e8250105de60809036bf2dfdb87bf9e465eabc5c7a34b1b933acfc71ddc40114529bbd83066a3274ebf2c284d8a920d04d369d31d99f1e9fd150d7e159b0d824f65f240624198757c742fe08c78034f56ac5481a2c249fd0b089d6fbcd310b0ef1e14666","Eldaram"]}
+{"type":"HTTP","requestId":"5866742a-dcad-4742-9cb7-fbd487c367bf","method":"POST","url":"/api/sessions"}
+{"type":"SQL","requestId":"5866742a-dcad-4742-9cb7-fbd487c367bf","sql":"select \"users\".* from \"users\" where \"email\" = $1","bindings":["dragan.ribes@gmail.com"]}
+{"type":"HTTP","requestId":"e724c913-55f5-44af-b044-cec55a54a7f9","method":"GET","url":"/api/users/1"}
+{"type":"SQL","requestId":"e724c913-55f5-44af-b044-cec55a54a7f9","sql":"select \"users\".* from \"users\" where \"users\".\"id\" = $1","bindings":[1]}
+{"type":"HTTP","requestId":"cd5bd782-efdb-4896-baef-aa03af994365","method":"GET","url":"/api/users/1"}
+{"type":"SQL","requestId":"cd5bd782-efdb-4896-baef-aa03af994365","sql":"select \"users\".* from \"users\" where \"users\".\"id\" = $1","bindings":[1]}
