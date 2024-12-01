@@ -1,10 +1,12 @@
 import { number, string } from "yup"
 
+export const taskValidator = string().min(1)
+
 export const nameValidator = string().min(3)
 
 export const titleValidator = string().min(20)
 
-export const descriptionValidator = string().min(20)
+export const descriptionValidator = string()
 
 export const idValidator = number().min(1)
 
